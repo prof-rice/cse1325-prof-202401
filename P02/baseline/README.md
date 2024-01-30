@@ -1,7 +1,5 @@
 # Assignment P02
 
-## Full Credit and Bonus
-
 FIRST, write the ``Pitch`` enum and the ``Note`` class as specified in the requirements. You cannot compile the code in this directory without them!
 
 **You may NOT modify Song.java!**
@@ -26,9 +24,4 @@ ricegf@antares:~/cse1325/full_credit$ java Song
 B A G A B B B   A A A   B D1 D1   B A G A B B B B A A G Gb G   
 ricegf@antares:~/cse1325/full_credit$ 
 
-## Extreme Bonus
-
-For the Extreme Bonus, you are allowed to modify the Song class, as you'll need to add note.play() to play the notes. In addition, you may need to tell the program to ignore exceptions (which we'll cover in Lecture 05).
-
-The Requirements PDF includes hints for the Extreme Bonus!
 
