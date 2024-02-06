@@ -1,0 +1,52 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+hide circle
+
+class Product {
+  -{static} nextStockNumber : int
+  -stockNumber : int
+  -name : string
+  -price : int
+  +Product(name : string, price : int)
+  +getstockNumber() : int
+  +getPrice() : int
+  +toString() : string <<override>>
+}
+  
+class Item {
+  -product : Product
+  -quantity : int
+  +Item(product : Product, quantity : int)
+  +getPrice() : int
+  +toString() : string <<override>>
+}
+
+class Customer {
+  -name : string
+  -email : string
+  +Customer(name : string, email : string)
+  +Customer(br : BufferedReader)
+  +save(bw : BufferedWriter)
+  +toString() : string <<override>>
+}
+
+class TestProduct {
+  +{static} main(args : String[])
+}
+
+class TestItem {
+  +{static} main(args : String[])
+}
+
+class TestCustomer {
+  +{static} main(args : String[])
+}
+
+Item *- Product
+TestProduct -- Product
+TestItem -- Item
+TestCustomer -- Customer
+
+@enduml
+

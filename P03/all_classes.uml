@@ -1,0 +1,197 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+hide circle
+
+package mdi {
+
+class Manga {
+  +{static} main(args : String[])
+}
+
+class Controller {
+  -store : Store
+  -output : string[]
+  -filename : string
+  __
+  +Manga()
+  +toString()
+  ..
+  #on_new_store()
+  #on_save()
+  #on_save_as()
+  #on_open()
+  #on_new_customer()
+  #on_new_order()
+  #on_new_tool()
+  #on_new_plant()
+  #on_new_mulch()
+  #on_set_view(view : View)
+  #on_about()
+  #on_quit()
+  ..
+  -get_int(prompt : string) : int
+  -get_double(prompt : string) : double
+  -get_string(prompt : string) : string
+  -print(string : string);
+}
+
+enum View {
+  TOOLS
+  PLANTS
+  MULCH
+  +toString() : string <<override>>
+}
+
+}
+
+package store {
+
+enum Exposure {
+  SHADE
+  PARTSUN
+  SUN
+  +toString() : string
+}
+enum Material {
+  RUBBER
+  PINE
+  CEDAR
+  HARDWOOD
+  +toString() : string
+}
+
+class Product #LightYellow {
+  -{static} nextStockNumber : int
+  -stockNumber : int
+  -name : string
+  -price : int
+  +Product(name : string, price : int)
+  +Product(br : BufferedReader)
+  +save(bw : BufferedWriter)
+  +getstockNumber() : int
+  +getPrice() : int
+  +toString() : string <<override>>
+}
+  
+class Plant extends Product {
+  -species : string
+  -exposure : Exposure
+  +Plant(name : string, price : double, description: string, species : string, exposure : Exposure)
+  +Plant(br : BufferedReader)
+  +save(bw : BufferedWriter)
+  +toString() : string
+}
+
+class Tool extends Product {
+  +Tool(name : string, price : double, description: string)
+  +Tool(br : BufferedReader)
+  +save(bw : BufferedWriter)
+}
+
+class Mulch extends Product {
+  -volume : int
+  -material : Material
+  +Mulch(name : string, price : double, description: string, volume : int, material : Material)
+  +Mulch(br : BufferedReader)
+  +save(bw : BufferedWriter)
+  +toString() : string
+}
+
+class Item #LightYellow {
+  -product : Product
+  -quantity : int
+  +Item(product : Product, quantity : int)
+  +Item(br : BufferedReader)
+  +save(bw : BufferedWriter)
+  +getPrice() : int
+  +toString() : string <<override>>
+}
+
+class Order {
+  -items : Item[]
+  -customer : Customer
+  +Order(customer : Customer)
+  +Order(br : BufferedReader)
+  +save(bw : BufferedWriter)
+  +add_item(item : Item)
+  +getPrice() : int
+}
+
+class Store {
+  -name : string
+  -products : Product[]
+  -customers : Customer[]
+  -orders : Order[]
+  __
+  +Store(name : string)
+  +Store(br : BufferedReader)
+  +save(bw : BufferedWriter)
+  +name() : string
+  ..
+  +add_product(product : Product)
+  +products() : int
+  +product(stocknum : int) :  Product
+  ..
+  +add_customer(customer : Customer)
+  +customers() : int
+  +customer(index : int) :  Customer
+  ..
+  +add_order(customer : Customer) : int
+  +add_item(order : int, product : Product, quantity : int)
+  +orders() : int
+  +order(index : int) :  Order&
+}
+
+class Customer #LightYellow {
+  -name : string
+  -email : string
+  +Customer(name : string, email : string)
+  +Customer(br : BufferedReader)
+  +save(bw : BufferedWriter)
+  +toString() : string <<override>>
+}
+
+note right of Store
+  getters for Product, Customer, and Order 
+  (e.g., products() and product(int))
+  will be replaced by iterators eventually
+end note
+
+note left of Order
+    Provide for streaming out for <b>ALL</b> classes
+end note
+
+note left of Product
+    Product and Customer relationships to Store not shown for clarity
+end note
+
+Item o-- Product
+note right on link 
+  Composition retains original Product attributes
+  so that changes (e.g., to price) don't affect
+  pre-existing orders
+end note
+
+note as N1
+  string[] usually means ArrayList<String>
+end note 
+
+}
+
+Mulch -- Material
+Plant -- Exposure
+
+' Store o-- Product
+Store o-- Order
+' Store o-r- Customer
+
+Order *-- Customer
+Order o-- Item
+
+Manga - Controller
+Controller *-- Store
+Controller o- View
+
+@enduml
+
