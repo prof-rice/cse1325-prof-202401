@@ -1,0 +1,18 @@
+$set $section 001 002
+$set $UML_A 1 2 3
+$set $UML_B 1 2 3
+$set $UML_C 1 2 3 
+$set $final class method field
+$set $BINARY 0 1
+$set $color1 RED GREEN YELLOW BLUE
+$set $color2 AMBER MAGENTA TEAL ORANGE VIOLET 
+$set $color3 CHARTREUSEVERMILLION
+$set $material1 HOG MONGOOSE SQUIRREL FOAM
+$set $material2 SABLE HORSE WOLF RACCOON
+$set $material3 MINK BADGER SHEEP RABBIT
+$set $material4 WEASEL PONY OX CAMEL
+$set $shape1 FLAT ANGLE RIGGER WAVE
+$set $shape2 BRIGHT FAN SWORD FOUNTAIN
+$set $shape3 FILBERT MOP TRIM STIPPLER
+$set $enum Color Material Shape
+
