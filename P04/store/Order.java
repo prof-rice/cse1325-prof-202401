@@ -70,7 +70,7 @@ public class Order {
         for(Item item : items) 
             sb.append("\n  " + item);
         int price = getPrice();
-        sb.append(String.format("\n\nOrder total $%5d.%2d", price/100, price%100));
+        sb.append(String.format("\n\nOrder total $%5d.%02d", price/100, price%100));
         return sb.toString();
     }
     private ArrayList<Item> items;

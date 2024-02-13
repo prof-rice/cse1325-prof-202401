@@ -42,9 +42,8 @@ class Controller {
                 if (executeCommand(command)) {                    // Execute the requested command
                     grid.animateRobots();                         // Move robots toward the player
                     grid.detectCollisions();                      // Kill any robot that crashes
-                } 
+                }
             } catch(Exception e) {
-                System.err.println("##### ERROR: " + e);
             }
         }
         view.printFinalGrid();                                    // Show final gameboard with results
@@ -63,8 +62,8 @@ class Controller {
             case '9', 'e' -> grid.movePlayer(Direction.up_right  );
             case '.'      -> grid.teleportPlayer();
             default       -> valid = false;
-         }
-         return valid;
+        }
+        return valid;
     }
     
     private Grid grid;

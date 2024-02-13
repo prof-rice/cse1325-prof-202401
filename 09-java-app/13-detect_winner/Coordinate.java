@@ -44,17 +44,19 @@ public class Coordinate {
     }
     
     public void add(Coordinate rhs) {
-        x = Math.min(Math.max(x+rhs.x,0),maxX-1);
-        y = Math.min(Math.max(y+rhs.y,0),maxY-1);
+        x = Math.min(Math.max(x+rhs.x,0),maxX);
+        y = Math.min(Math.max(y+rhs.y,0),maxY);
         validate();
     }
     
     @Override
     public boolean equals(Object o) {
         if(this == o) return true;
-        if(o == null || getClass() != o.getClass()) return false;
+        // if(o == null || getClass() != o.getClass()) return false;
+        if(o == null || !(o instanceof Coordinate)) return false;
+        
         final Coordinate that = (Coordinate) o;
-        return (x == that.x) && (y == that.y);
+        return (this.x == that.x) && (this.y == that.y);
     }
     
     protected void validate() {

@@ -38,16 +38,22 @@ public class View {
         clearScreen();
         printBanner();
         switch(header) {
-            case NORMAL: {break;}
-            case HELP:   {printHelp(); break;}
+            case NORMAL: {
+                System.out.println(grid);
+                break;}
+            case HELP:   {
+                printHelp();
+                System.out.println(grid);
+                break;}
             case FINAL:  {
-                if(grid.playerIsAlive()) printTrophy(); 
-                else printExplosion();
+                System.out.println(grid);
+                try {Thread.sleep(2000);} catch (Exception e) { }  // pause 2 seconds
+                if( grid.playerIsAlive() && !grid.anyRobotsAlive()) printTrophy();
+                if(!grid.playerIsAlive() &&  grid.anyRobotsAlive()) printExplosion();
                 break;
             }
             default: throw new IllegalArgumentException();  // In case of new Header value
         }
-        System.out.println(grid);
         header = Header.NORMAL;
     }
     

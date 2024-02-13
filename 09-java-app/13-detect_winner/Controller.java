@@ -42,7 +42,7 @@ class Controller {
                 if (executeCommand(command)) {                    // Execute the requested command
                     grid.animateRobots();                         // Move robots toward the player
                     grid.detectCollisions();                      // Kill any robot that crashes
-                } 
+                }
             } catch(Exception e) {
             }
         }

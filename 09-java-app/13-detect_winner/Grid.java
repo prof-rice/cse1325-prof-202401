@@ -40,15 +40,15 @@ public class Grid {
                          player.coordinate().x();
             int deltaY =  robot.coordinate().y() -
                          player.coordinate().y();
-              robot.move(new Direction(deltaX < 0 ? 1 : (deltaX > 0 ? -1 : 0),
-                                       deltaY < 0 ? 1 : (deltaY > 0 ? -1 : 0)));
+            robot.move(new Direction(deltaX < 0 ? 1 : (deltaX > 0 ? -1 : 0), 
+                                     deltaY < 0 ? 1 : (deltaY > 0 ? -1 : 0)));
     }
   }
     }
     public String toString() {
         String s = "\n\r";
-        for(int y=0; y<Coordinate.maxY; ++y) {
-            for(int x=0; x<Coordinate.maxX; ++x) {
+        for(int y=0; y<=Coordinate.maxY; ++y) {
+            for(int x=0; x<=Coordinate.maxX; ++x) {
                 char icon = '.';
                 Coordinate here = new Coordinate(x,y);
                 for(Robot r : robots) if(r.coordinate().equals(here)) 
