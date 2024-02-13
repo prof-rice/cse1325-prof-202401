@@ -48,6 +48,7 @@ public class Complex {
     /**
      * Calculates the magnitude of this complex number.
      *
+     * @return         The magnitude of the complex number in this object.
      * @since          1.0
      */
     public double magnitude() {
@@ -69,7 +70,7 @@ public class Complex {
      * Returns the Cartesian or polar form of the Complex number,
      *   depending on the current form.
      *
-     * @return         String the resulting Complex number
+     * @return         String of the resulting Complex number depending on Form
      * @since          1.0
      */
 
@@ -119,7 +120,7 @@ public class Complex {
     /**
      * Specifies the form for future Complex I/O operations for all instances.
      *
-     * <p>See {@link #form} for valid constants
+     * <p>See Form for valid constants
      *
      * @param form     The form to use for future operations
      * @since          1.0
@@ -129,7 +130,7 @@ public class Complex {
     /**
      * Returns the current form for all Complex I/O operations.
      *
-     * <p>See {@link #form} for valid constants
+     * <p>See Form for valid constants
      *
      * @return         The current form in use
      * @since          1.0
