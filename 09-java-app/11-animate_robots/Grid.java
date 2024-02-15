@@ -44,8 +44,8 @@ public class Grid {
     }
     public String toString() {
         String s = "\n\r";
-        for(int y=0; y<Coordinate.maxY; ++y) {
-            for(int x=0; x<Coordinate.maxX; ++x) {
+        for(int y=0; y<=Coordinate.maxY; ++y) {
+            for(int x=0; x<=Coordinate.maxX; ++x) {
                 char icon = '.';
                 Coordinate here = new Coordinate(x,y);
                 for(Robot r : robots) if(r.coordinate().equals(here)) 

@@ -41,7 +41,7 @@ class Controller {
                 command = (char)System.in.read();                 // Read the next character
                 if (executeCommand(command)) {                    // Execute the requested command
                     grid.animateRobots();                         // Move robots toward the player
-                    grid.detectCollisions();                      // Kill any robot that crashes 
+                    grid.detectCollisions();                      // Kill any robot that crashes
                 }
             } catch(Exception e) {
                 System.err.println("##### ERROR: " + e);

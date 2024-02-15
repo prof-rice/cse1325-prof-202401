@@ -36,8 +36,10 @@ public class View {
     }
     public void printFinalGrid() {
         clearScreen();
-        if(grid.playerIsAlive()) printTrophy(); else printExplosion();
         System.out.println(grid);
+        try {Thread.sleep(2000);} catch (Exception e) { }  // pause 2 seconds
+        if( grid.playerIsAlive() && !grid.anyRobotsAlive()) printTrophy();
+        if(!grid.playerIsAlive() &&  grid.anyRobotsAlive()) printExplosion();
     }
     private void printExplosion() {
         System.out.print(
@@ -68,7 +70,7 @@ public class View {
             "     '.   .'     \n\r" +
             "       | |       \n\r" +
             "      .' '.      \n\r" +
-            "     _|___|      \n\r" +
+            "     _|___|_     \n\r" +
             "    [#######] apc\n\r\n\r" +
             "So shines a good deed in a weary world...\n\r" // ditto
        );
