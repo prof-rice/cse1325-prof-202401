@@ -1,0 +1,179 @@
+@startuml
+skinparam classAttributeIconSize 0
+' skinparam backgroundColor #D3D3D3
+hide circle
+
+package mdi {
+
+class Manga {
+  {static} main(args : String[]) 
+}
+
+class Controller {
+  -store : Store
+  -view : View
+  -mainMenu : Menu
+  -output : String
+  -isRunning : boolean
+  -in : Scanner
+--
+  +Controller(storeName : string)
+  +mdi()
+..
+  -exit()
+  -placeOrder()
+  -newCustomer()
+  -newTool()
+  -newPlant()
+  -switchView()
+..
+  -getView() : String
+  -selectFromMenu() : Integer
+  -print(s : string)
+  -getString(prompt : string)
+  -getInt(prompt : string) : Integer
+  -getDouble(prompt : string) : Double
+}
+class Runnable <<interface>> #D3D3D3 {
+  +{abstract} run()
+}
+
+class MenuItem #D3D3D3 extends Runnable {
+  -menuText : Object
+  -menuResponse : Runnable
+  +MenuItem(menuText : Object, menuResponse : Runnable)
+  +toString() : String <<override>>
+  +run() <<override>>
+}
+
+class Menu #D3D3D3 {
+  -items : MenuItem[] <<ArrayList>>
+  +addMenuItem(item : MenuItem)
+  +toString() : String <<override>>
+  +run(itemNumber : int)
+}
+
+Note as N3
+  You may use Menu and MenuItem
+  from Lecture 10 without attribution.
+  Runnable is in package java.lang.
+end Note
+
+MenuItem -o Menu
+Controller -- Menu
+Manga -- Controller
+
+}
+
+package test {
+
+class TestProduct #D3D3D3 {
+  {static} main(args : String[]) 
+}
+
+note bottom of TestProduct
+  Include other
+  regression tests
+  as applicable
+end note
+}
+
+package store {
+
+class Store {
+  -name : string
+  -customers : Customer[]
+  -products : Product[]
+  -orders : Order[]
+--
+  +Store(name : string)
+  +netName : string
+..
+  +addCustomer(customer : Customer)
+  +getCustomerList() : string
+..
+  +addProduct(product : Product)
+  +getProductList() : string
+..
+  +newOrder(customer : int) : int
+  +addToOrder(order : int, product : int, quantity : int)
+  +getOrderList() : string
+}
+
+enum Exposure <<enum>> {
+  SHADE
+  PARTSUN
+  SUN
+  +toString() : string
+}
+abstract class Product <<abstract>> #D3D3D3  {
+  -{static} nextStockNumber : int
+  -stockNumber : int
+  -name : string
+  -price : int
+  +Product(name : string, price : int)
+  +getstockNumber() : int
+  +getPrice() : int
+  +toString() : string <<override>>
+}
+  
+class Plant extends Product {
+  -exposure : Exposure
+  +Plant(species : string, price : double, exposure : Exposure)
+  +getExposure() : Exposure
+}
+
+class Tool extends Product {
+  +Tool(name : string, price : double)
+}
+
+class Item #D3D3D3 {
+  -product : Product
+  -quantity : int
+  +Item(product : Product, quantity : int)
+  +getPrice() : int
+  +toString() : string <<override>>
+}
+
+class Order {
+  -{static} nextOrderkNumber : int
+  -orderNumber : int
+  -items : Item[]
+  -customer : Customer
+  +Order(customer : Customer)
+  +addItem(item : Item)
+  +getPrice() : int
+  +toString() : string <<override>>
+}
+
+
+class Customer #D3D3D3 {
+  -name : string
+  -email : string
+  +Customer(name : string, email : string)
+  +toString() : string <<override>>
+}
+
+Item o-- Product
+
+note as N2
+  Write JavaDoc for 
+  (at least) this class
+end note
+
+Order . N2
+
+}
+
+Plant -- Exposure
+
+Order o-- Customer
+Order o-- Item
+
+TestProduct - Product
+
+Controller - Store
+Store - Order
+Store - Customer
+Store - Product
+@enduml
