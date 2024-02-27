@@ -1,0 +1,3 @@
+interface Launchable {
+    void launch();
+}
