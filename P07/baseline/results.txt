@@ -1,0 +1,98 @@
+====================
+HOMEWORK P07 RESULTS
+====================
+
+Spring 2024
+
+
+FULL CREDIT
+===========
+
+NOTE: These are measurements which may vary plus your opinions which may vary a LOT. We won't grade for "correctness", just completeness.
+
+QUESTION 1: What Factor command line arguments did you use to achieve a 30 to 60 second runtime? Note: We're only interested in the "real" seconds for this question.
+
+
+
+
+
+
+
+QUESTION 2: Provide the full output (including the time command) for your program, with 1 to 16 threads. **Ensure that the result is the same for all 16 runs.** (The order of the solutions may vary.) With bash, you can run all of these with a single command if you like, adding whatever Factor command line arguments you identified in QUESTION 1: 
+
+for i in {1..16} ; do time java Factor $i *bigint1* ... *bigintn* ; done
+
+
+
+Example Timing (first 2 of 16 runs only on Antares - REPLACE this with your timing for 1 to 16 threads):
+
+ricegf@antares$ for i in {1..16} ; do
+> time java Factor $i 115342773083375138441712 89615432828121443469269 140136045666459146416 8726382779747718874005 409691109030485036291146 38792691073186584079549 140136045666459146419 33114517270146193529599 478713804955782741648
+> done
+Thread 0 solving 0-8
+2 * 2 * 2 * 2 * 3 * 3 * 11 * 13 * 17 * 991 * 4125311 * 80595833 = 115342773083375138441712
+19 * 1384847 * 47283371 * 72030923 = 89615432828121443469269
+2 * 2 * 2 * 2 * 7 * 7 * 19 * 127 * 311 * 2711 * 87859063 = 140136045666459146416
+3 * 3 * 3 * 5 * 7 * 83 * 17903 * 56519 * 109952239 = 8726382779747718874005
+2 * 11731 * 209717 * 593851 * 140210449 = 409691109030485036291146
+43 * 87277 * 92794831 * 111392989 = 38792691073186584079549
+2113 * 4567 * 108761 * 133519949 = 140136045666459146419
+7 * 23 * 1301 * 6793 * 155423 * 149740181 = 33114517270146193529599
+2 * 2 * 2 * 2 * 3 * 3 * 83 * 7477 * 27487 * 194886001 = 478713804955782741648
+
+real	0m30.911s
+user	0m31.373s
+sys	0m0.294s
+
+
+Thread 0 solving 0-3
+Thread 1 solving 4-8
+2 * 2 * 2 * 2 * 3 * 3 * 11 * 13 * 17 * 991 * 4125311 * 80595833 = 115342773083375138441712
+2 * 11731 * 209717 * 593851 * 140210449 = 409691109030485036291146
+19 * 1384847 * 47283371 * 72030923 = 89615432828121443469269
+43 * 87277 * 92794831 * 111392989 = 38792691073186584079549
+2 * 2 * 2 * 2 * 7 * 7 * 19 * 127 * 311 * 2711 * 87859063 = 140136045666459146416
+3 * 3 * 3 * 5 * 7 * 83 * 17903 * 56519 * 109952239 = 8726382779747718874005
+2113 * 4567 * 108761 * 133519949 = 140136045666459146419
+7 * 23 * 1301 * 6793 * 155423 * 149740181 = 33114517270146193529599
+2 * 2 * 2 * 2 * 3 * 3 * 83 * 7477 * 27487 * 194886001 = 478713804955782741648
+
+real	0m21.844s
+user	0m34.172s
+sys	0m0.414s
+
+
+
+QUESTION 3: Does adding more threads continue to speed up the program? Do more threads ever slow down the program slightly?  Why or why not?
+
+
+
+
+
+
+
+
+QUESTION 4: Does adding more threads increase the "system load", or is it constant regardless of the number of threads?  Why?
+
+
+
+
+
+
+
+
+
+BONUS
+=====
+
+QUESTION 5: Time your version of Factor as you did for the full credit version. Is this additional layer of threading faster, slower, or roughly equivalent in performance? Why?
+
+
+
+
+
+YOUR Timing:
+
+
+
+

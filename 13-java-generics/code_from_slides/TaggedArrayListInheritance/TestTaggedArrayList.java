@@ -30,19 +30,19 @@ public class TestTaggedArrayList {
         if(strings.size() > 0) {
             sb.append("\nStrings\n=======\n");
             for(int i=0; i<strings.size(); ++i) 
-                sb.append("" + strings.when(i) + " '" + strings.get(i) + "'");
+                sb.append("" + strings.when(i) + " '" + strings.get(i) + "'\n");
             sb.append('\n');
         }
         if(ints.size() > 0) {
             sb.append("\nIntegers\n========\n");
             for(int i=0; i<ints.size(); ++i) 
-                sb.append("" + ints.when(i) + " '" + ints.get(i) + "'");
+                sb.append("" + ints.when(i) + " '" + ints.get(i) + "'\n");
             sb.append('\n');
         }
         if(coords.size() > 0) {
             sb.append("\nCoordinates\n===========\n");
             for(int i=0; i<coords.size(); ++i) 
-                sb.append("" + coords.when(i) + " '" + coords.get(i) + "'");
+                sb.append("" + coords.when(i) + " '" + coords.get(i) + "'\n");
             sb.append('\n');
         }
         return sb.toString();
