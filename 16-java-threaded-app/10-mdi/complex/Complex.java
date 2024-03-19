@@ -49,11 +49,10 @@ public class Complex {
     @Override
     public boolean equals(Object o) {
         if(this == o) return true;
-        if(o == null || !(o instanceof Complex)) return false;
-        // if(o == null || this.getClass() != o.getClass()) return false;
+        if(o == null) return false;
+        if(this.getClass() != o.getClass()) return false;
         Complex c = (Complex) o;
-        return equals(x, c.x) && equals(y, c.y);
-        // return (x == c.x) && (y == c.y);
+        return (x == c.x) && (y == c.y);
     }
     @Override
     public int hashCode() {
