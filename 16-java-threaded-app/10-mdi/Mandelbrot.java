@@ -11,6 +11,7 @@ public class Mandelbrot {
     public final static int MAX_COLOR = 255;
     private static Scanner scanner = new Scanner(System.in);
 
+    // Old-style MDI - needs update
     public static void main(String[] args) {
         boolean dirty  = false;
         int width      = 1920;
@@ -93,6 +94,7 @@ public class Mandelbrot {
             }
         }
     }
+    
     private static String getFilename() {
         String filename = scanner.nextLine().trim();
         if(filename.isEmpty()) {
@@ -101,6 +103,15 @@ public class Mandelbrot {
         }
         return filename;
     }
+    public void setView(double xOffset, double yOffset, double zoom) {
+        this.xOffset = xOffset;
+        this.yOffset = yOffset;
+        this.zoom = 0.001 / zoom;
+    }
+
+    // ====================== Calculate Image ===============================
+
+    // The constructor, in which the image is actually calculated
     public Mandelbrot(int width, int height, int icount, int threads,
                       double zoom, double xOffset, double yOffset) {
         this.width  = width;
@@ -112,39 +123,17 @@ public class Mandelbrot {
         this.yOffset = yOffset / 10_000;       //  0.0    0.0       0.0
         this.colors = new int[width][height];
         this.mutex = new Object();
-        calculateImageViaPool(threads);
-    }
-    public void setView(double xOffset, double yOffset, double zoom) {
-        this.xOffset = xOffset;
-        this.yOffset = yOffset;
-        this.zoom = 0.001 / zoom;
+        // calculateImage();             // No threads
+        // calculateImage(threads);      // Explicitly allocated threads
+        calculateImageViaPool(threads);  // Thread pool
     }
 
-    private void calculateRows() {
-        int row = 0;
-        while(true) {
-            synchronized(mutex) {
-                row = nextY++;
-            }
-            if(row >= height) break;
-            calculateRow(row);
-        }
+    // Non-threaded version
+    public void calculateImage () {
+        for(int y=0; y<height; ++y) calculateRow(y);
     }
-    public void calculateImageViaPool (int numThreads) {
-        Thread[] threads = new Thread[numThreads];
-        for(int i=0; i<numThreads; ++i) {
-            threads[i] = new Thread(() -> calculateRows());
-            threads[i].start();
-        }
-        for(Thread thread : threads) {
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                System.out.println("Interrupted Exception");
-            }
-        }
-    }
-    
+
+    // Old school with explicit thread allocation and Runnable implementation 
     public void calculateImage (int numThreads) {
         Thread[] threads = new Thread[numThreads];
         int slice = height / numThreads;
@@ -173,9 +162,35 @@ public class Mandelbrot {
         }
     }
 
-    public void calculateImage () {
-        for(int y=0; y<height; ++y) calculateRow(y);
+    // More modern approach, with thread pool and lambda
+    public void calculateImageViaPool (int numThreads) {
+        Thread[] threads = new Thread[numThreads];
+        for(int i=0; i<numThreads; ++i) {
+            threads[i] = new Thread(() -> calculateRows());
+            threads[i].start();
+        }
+        for(Thread thread : threads) {
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                System.out.println("Interrupted Exception");
+            }
+        }
     }
+    
+    // For thread pool only
+    private void calculateRows() {
+        int row = 0;
+        while(true) {
+            synchronized(mutex) {
+                row = nextY++;
+            }
+            if(row >= height) break;
+            calculateRow(row);
+        }
+    }
+
+    // For all versions - the magic happens here
     protected void calculateRow   (int y) {
         for(int x=0; x<width; ++x) calculatePoint(x, y);
     }
@@ -187,6 +202,8 @@ public class Mandelbrot {
         while(z.abs() < 2.0 && iterations++ <= icount) z = z.times(z).plus(point);
         colors[x][y] = (iterations < icount) ? (MAX_COLOR*iterations)/icount : 0;
     }
+
+    // ===================== End Calculate Image =============================
 
     @Override
     public String toString() {
