@@ -39,8 +39,8 @@ public class GroceryCart {
     public void addItem(long upc, Item item) {
         items.put(upc, item);
     }
-    public Item removeItem(long upc) {
-        return items.remove(upc);
+    public void removeItem(long upc) {
+        items.remove(upc);
     }
     @Override
     public String toString() {

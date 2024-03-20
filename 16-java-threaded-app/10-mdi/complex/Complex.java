@@ -50,6 +50,7 @@ public class Complex {
     public boolean equals(Object o) {
         if(o  == this) return true;
         if(o == null || !(o instanceof Complex)) return false;
+        // Equally acceptable
         // if(o == null || this.getClass() != o.getClass()) return false;
         Complex c = (Complex) o;
         return equals(x, c.x) && equals(y, c.y);
@@ -59,7 +60,8 @@ public class Complex {
     public int hashCode() {
         return Objects.hash(x, y);
     }
-/*  @Override
+/*  // Old school hashCodee()
+    @Override
     public int hashCode() {
         int hash = 7;
         hash = 31*hash + (int) (10000*x);
@@ -72,12 +74,9 @@ public class Complex {
     private boolean equals(Double d1, Double d2) {
         return Math.abs(d1 - d2) < EPSILON;
     }
-    private boolean equals(int i1, int i2) {
-        return i1 == i2;
-    }
     
-    private double x;
-    private double y;
+    private double x; // real
+    private double y; // imaginary
 }
 
 

@@ -1,4 +1,5 @@
 import complex.Complex;
+
 import java.util.Scanner;
 
 import java.io.BufferedReader;
@@ -25,7 +26,7 @@ public class Mandelbrot {
         char cmd = ' ';
         
         while(cmd != '0') {
-        System.out.println("w) Width Height " + width + " x " + height);
+            System.out.println("w) Width Height " + width + " x " + height);
             System.out.println("i) iCount " + icount);
             System.out.println("t) Threads " + threads);
             System.out.println("z) zoom " + zoom);
@@ -124,7 +125,7 @@ public class Mandelbrot {
     }
     
     // No threads
-        public void calculateImage () {
+    public void calculateImage () {
         for(int y=0; y<height; ++y) calculateRow(y);
     }
 
