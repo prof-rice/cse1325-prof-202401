@@ -3,7 +3,7 @@ public class Calculator {
         try {
             if(args.length % 2 != 1) throw new 
                 IllegalArgumentException(
-                    "usage: java Calculator n1 [op n2]...");
+                    "usage: java Calculator n1 [op n2]... for ops +, -, *, /");
             int accumulator = Integer.parseInt(args[0]);
             int index = 1;
             while(index+1 < args.length) {
@@ -11,8 +11,8 @@ public class Calculator {
                 switch(args[index]) {
                     case "+" -> accumulator += operand;
                     case "-" -> accumulator -= operand;
-                    case "x" -> accumulator *= operand;
-                    case "÷" -> accumulator /= operand;
+                    case "*" -> accumulator *= operand;
+                    case "/" -> accumulator /= operand;
                     default -> throw new 
                         IllegalArgumentException("Bad operator " 
                                                + args[index]);

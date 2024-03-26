@@ -44,6 +44,10 @@ getline: getline.cpp
 	-$(CXX) $(CXXFLAGS) -o getline getline.cpp
 	@printf "Now type ./getline to execute the result\n\n"
 
+hello: hello.cpp
+	-$(CXX) $(CXXFLAGS) -o hello hello.cpp
+	@printf "Now type ./hello to execute the result\n\n"
+
 manipulators: manipulators.cpp
 	-$(CXX) $(CXXFLAGS) -o manipulators manipulators.cpp
 	@printf "Now type ./manipulators to execute the result\n\n"
@@ -72,8 +76,8 @@ sizeof: sizeof.cpp
 	-$(CXX) $(CXXFLAGS) -o sizeof sizeof.cpp
 	@printf "Now type ./sizeof to execute the result\n\n"
 
-all:  auto call_by_reference call_by_value cin constants cout declare_invoke_define decl_no_def getline manipulators math mixed_right mixed_wrong multi_input oops sizeof
+all:  auto call_by_reference call_by_value cin constants cout declare_invoke_define decl_no_def getline hello manipulators math mixed_right mixed_wrong multi_input oops sizeof
 
 clean:
-	rm -f *.o *.gch a.out  auto call_by_reference call_by_value cin constants cout declare_invoke_define decl_no_def getline manipulators math mixed_right mixed_wrong multi_input oops sizeof
+	rm -f *.o *.gch a.out  auto call_by_reference call_by_value cin constants cout declare_invoke_define decl_no_def getline hello manipulators math mixed_right mixed_wrong multi_input oops sizeof
 
