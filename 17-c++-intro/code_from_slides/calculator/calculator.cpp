@@ -10,8 +10,8 @@ int main(int argc, char* argv[]) {
             switch((unsigned char)argv[index][0]) {
                 case '+': accumulator += operand; break;
                 case '-': accumulator -= operand; break;
-                case 'x': accumulator *= operand; break;
-                case '÷': accumulator /= operand; break;
+                case '*': accumulator *= operand; break;
+                case '/': accumulator /= operand; break;
                 default: throw new 
                     std::runtime_error(std::string("Bad operator ") 
                                       + argv[index]);
@@ -20,6 +20,6 @@ int main(int argc, char* argv[]) {
         }
         std::cout << accumulator << std::endl;
     } catch(...) {
-        std::cerr << "usage: " << argv[0] << " n1 [op n2]..." << std::endl;
+        std::cerr << "usage: " << argv[0] << " n1 [op n2]... for ops +, -, *, /" << std::endl;
     }
 }
