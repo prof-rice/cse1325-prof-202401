@@ -1,5 +1,6 @@
 #ifndef __READING_H
 #define __READING_H
+
 #include <istream>
 #include <ostream>
 

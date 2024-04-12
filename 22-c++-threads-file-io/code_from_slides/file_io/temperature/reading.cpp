@@ -3,7 +3,14 @@
 
 Reading::Reading(int hour, double temp)
             : _hour{hour}, _temp{temp} {validate();}
+
+// Chain to non-default constructor
 Reading::Reading() : Reading(0,0) { }
+
+// Alternately, a single constructor would work, like this
+// Reading::Reading(int hour = 0, double temp = 0)
+//             : _hour{hour}, _temp{temp} {validate();}
+
 
 int Reading::hour() {return _hour;}
 double Reading::temp() {return _temp;}

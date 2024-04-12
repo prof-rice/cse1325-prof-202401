@@ -23,9 +23,9 @@ public class Farm {
         System.out.println("W E L C O M E   T O   T H E   B A R N Y A R D !");
         for (int i=0; i<120; ++i) {
             for (Critter c: critters) { 
-                 c.count(); 
-                 c.speak();
-             }
+                c.count(); 
+                c.speak();
+            }
             try {
                 ms.sleep(200L + (long) (200L * Math.random()));
             } catch (InterruptedException e) { 

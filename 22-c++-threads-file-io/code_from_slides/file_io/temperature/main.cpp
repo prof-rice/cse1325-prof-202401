@@ -1,23 +1,24 @@
 #include "readings.h"
+
 #include <iostream>
 #include <fstream>
 
 int main(int argc, char* argv[]) {
-    if(argc != 2) {
-        std::cerr << "usage: " << argv[0] << " tempfile.txt" << std::endl;
+    if(argc != 2) {                              // Argument validation
+        std::cerr << "usage: " << argv[0] << " temps.txt" << std::endl;
         return -1;
     }
-    std::string file{argv[1]};
-    std::ifstream ifs{file};
+    std::string filename{argv[1]};               // Open data file for reading
+    std::ifstream ifs{filename};
     if (!ifs) {
-        std::cerr << "Invalid filename: " << file << std::endl;
+        std::cerr << "Invalid filename: " << filename << std::endl;
         return -2;
     }
 
-    Readings readings{ifs};
-    std::cout << readings.graph() << std::endl;
+    Readings readings{ifs};                      // Construct object from file
+    std::cout << readings.graph() << std::endl;  // Print the graph
     
-    Reading min = readings[0];
+    Reading min = readings[0];                   // Calculate and print min / max
     Reading max = readings[0];
     for(int i=1; i<readings.size(); ++i) {
         if(min.temp() < readings[i].temp()) min = readings[i];
