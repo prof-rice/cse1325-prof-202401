@@ -1,0 +1,751 @@
+UT
+Western Governors University
+95108
+NH
+Southern New Hampshire University
+94858
+AZ
+Arizona State University Campus Immersion
+64561
+AZ
+Grand Canyon University
+60170
+FL
+University of Central Florida
+53707
+OH
+Ivy Tech Community College
+51424
+TX
+Texas A & M University-College Station
+51152
+AZ
+University of Phoenix-Arizona
+50099
+TX
+Dallas College
+48922
+OH
+Ohio State University-Main Campus
+45635
+UT
+Brigham Young University-Idaho
+45509
+TX
+Lone Star College System
+45079
+VA
+Liberty University
+43629
+PA
+Pennsylvania State University-Main Campus
+42614
+FL
+Miami Dade College
+40329
+FL
+Florida International University
+38978
+IN
+Purdue University Global
+37961
+IN
+Purdue University-Main Campus
+37891
+NJ
+Rutgers University-New Brunswick
+37502
+TX
+The University of Texas at Austin
+37327
+MI
+Michigan State University
+37228
+AZ
+University of Arizona
+37078
+IN
+Indiana University-Bloomington
+36299
+IL
+University of Illinois Urbana-Champaign
+35631
+FL
+University of South Florida
+34921
+AZ
+Arizona State University Digital Immersion
+34910
+CA
+University of California-San Diego
+34529
+FL
+University of Florida
+34229
+GA
+Kennesaw State University
+33903
+CA
+University of California-Los Angeles
+33313
+FL
+Florida State University
+33238
+MN
+University of Minnesota-Twin Cities
+33156
+WI
+University of Wisconsin-Madison
+32799
+CA
+University of California-Berkeley
+32634
+TX
+University of Houston
+32296
+NY
+New York University
+31930
+WA
+University of Washington-Seattle Campus
+31710
+MI
+University of Michigan-Ann Arbor
+31708
+CA
+University of California-Davis
+31506
+TX
+Texas Tech University
+31400
+FL
+Full Sail University
+31201
+CA
+California State University-Fullerton
+31048
+FL
+Valencia College
+30816
+UT
+Brigham Young University
+30683
+VA
+Virginia Polytechnic Institute and State University
+30394
+CO
+University of Colorado Boulder
+29951
+CA
+University of California-Irvine
+29921
+CA
+California State University-Long Beach
+29890
+WV
+American Public University System
+29745
+CA
+San Diego State University
+29679
+AL
+The University of Alabama
+29637
+OH
+Eastern Gateway Community College
+29458
+MD
+University of Maryland-College Park
+29094
+VA
+Northern Virginia Community College
+28837
+UT
+Utah Valley University
+28818
+TX
+Houston Community College
+28769
+TX
+University of North Texas
+28737
+GA
+University of Georgia
+28709
+TX
+Texas State University
+28633
+CA
+California State University-Northridge
+28368
+MD
+University of Maryland Global Campus
+28143
+SC
+University of South Carolina-Columbia
+27141
+TX
+Tarrant County College District
+26764
+FL
+Keiser University-Ft Lauderdale
+26693
+CO
+Colorado Technical University-Colorado Springs
+26549
+TX
+The University of Texas at Arlington
+26173
+LA
+Louisiana State University and Agricultural & Mechanical College
+26127
+GA
+Georgia State University
+25515
+CA
+California State University-Sacramento
+25465
+OH
+University of Cincinnati-Main Campus
+25311
+TX
+The University of Texas at San Antonio
+25250
+CA
+San Jose State University
+24932
+PA
+Temple University
+24926
+MA
+University of Massachusetts-Amherst
+24806
+VA
+George Mason University
+24711
+TN
+The University of Tennessee-Knoxville
+24703
+IA
+Iowa State University
+24649
+NC
+North Carolina State University at Raleigh
+24646
+AL
+Auburn University
+24362
+CA
+California State Polytechnic University-Pomona
+23612
+AZ
+Northern Arizona University
+23506
+UT
+University of Utah
+23355
+CO
+Colorado State University-Fort Collins
+23045
+CA
+University of California-Santa Barbara
+22961
+MA
+Boston University
+22953
+TX
+The University of Texas Rio Grande Valley
+22846
+AK
+University of Arkansas
+22542
+OR
+Oregon State University
+22396
+WA
+Washington State University
+22306
+MO
+University of Missouri-Columbia
+22230
+FL
+Broward College
+22184
+NC
+University of North Carolina at Charlotte
+22143
+CA
+University of California-Riverside
+22012
+NY
+University at Buffalo
+22007
+SC
+Clemson University
+21989
+CA
+University of Southern California
+21893
+TX
+Collin County Community College District
+21846
+FL
+Florida Atlantic University
+21757
+NV
+University of Nevada-Las Vegas
+21706
+GA
+Georgia Southern University
+21606
+WV
+West Virginia University
+21538
+TX
+Austin Community College District
+21504
+AZ
+Ashford University
+21395
+PA
+University of Pittsburgh-Pittsburgh Campus
+20997
+CA
+California State University-Los Angeles
+20922
+IL
+University of Illinois Chicago
+20859
+CA
+San Francisco State University
+20796
+UT
+Utah State University
+20465
+IA
+University of Iowa
+20363
+KY
+University of Kentucky
+20308
+CA
+California Polytechnic State University-San Luis Obispo
+20269
+NC
+East Carolina University
+20188
+IL
+DeVry University-Illinois
+19618
+VA
+Virginia Commonwealth University
+19613
+MA
+Northeastern University
+19601
+CA
+California State University-Fresno
+19544
+VA
+James Madison University
+19512
+OK
+University of Oklahoma-Norman Campus
+19235
+DE
+University of Delaware
+19173
+TX
+The University of Texas at Dallas
+18971
+CT
+University of Connecticut
+18940
+NC
+University of North Carolina at Chapel Hill
+18892
+OK
+Oklahoma State University-Main Campus
+18799
+NY
+Stony Brook University
+18751
+CA
+University of California-Santa Cruz
+18591
+TX
+South Texas College
+18544
+NE
+University of Nebraska-Lincoln
+18453
+TX
+Mt San Antonio College
+18307
+WV
+Appalachian State University
+18287
+OH
+Kent State University at Kent
+18271
+FL
+Hillsborough Community College
+18083
+OR
+University of Oregon
+17879
+UT
+Weber State University
+17769
+MS
+Mississippi State University
+17759
+MI
+Grand Valley State University
+17682
+NY
+Syracuse University
+17518
+FL
+Miami University-Oxford
+17473
+KS
+University of Kansas
+17458
+NV
+College of Southern Nevada
+17371
+IN
+Indiana University-Purdue University-Indianapolis
+17324
+PA
+Drexel University
+17230
+DE
+Columbus State Community College
+17164
+WI
+University of Wisconsin-Milwaukee
+17048
+VA
+University of Virginia-Main Campus
+17009
+OH
+Ohio University-Main Campus
+16748
+IL
+Illinois State University
+16607
+CA
+Santa Monica College
+16550
+MD
+Towson University
+16375
+CA
+Palm Beach State College
+16367
+GA
+Georgia Institute of Technology-Main Campus
+16360
+MS
+University of Mississippi
+16199
+TX
+Sam Houston State University
+16166
+TX
+The University of Texas at El Paso
+16091
+ID
+Boise State University
+15968
+VA
+Old Dominion University
+15913
+IL
+American InterContinental University
+15756
+FL
+St Petersburg College
+15738
+NY
+Cornell University
+15575
+TX
+Baylor University
+15570
+TN
+Middle Tennessee State University
+15509
+NJ
+Montclair State University
+15468
+CA
+American River College
+15454
+NV
+University of Nevada-Reno
+15427
+NY
+Binghamton University
+15308
+CA
+University of the People
+15128
+NY
+CUNY Hunter College
+15065
+CA
+California State University-San Bernardino
+14929
+UT
+Salt Lake Community College
+14928
+MI
+Wayne State University
+14921
+CA
+Long Beach City College
+14893
+GA
+University of North Georgia
+14581
+TX
+Wake Technical Community College
+14447
+CA
+East Los Angeles College
+14230
+TX
+El Paso Community College
+14134
+NJ
+Rowan University
+14121
+FL
+Florida State College at Jacksonville
+14115
+NY
+CUNY Bernard M Baruch College
+14045
+KS
+Kansas State University
+13971
+CA
+Bakersfield College
+13951
+OR
+Portland Community College
+13925
+PA
+West Chester University of Pennsylvania
+13913
+IN
+Ball State University
+13867
+NC
+University of North Carolina at Greensboro
+13826
+IL
+DePaul University
+13824
+NY
+CUNY Borough of Manhattan Community College
+13797
+CA
+San Joaquin Delta College
+13713
+CA
+Pasadena City College
+13646
+MT
+Montana State University
+13632
+RI
+University of Rhode Island
+13571
+IL
+College of DuPage
+13508
+NC
+University of North Carolina Wilmington
+13442
+NM
+University of New Mexico-Main Campus
+13398
+CA
+California State University-Chico
+13389
+OG
+Portland State University
+13305
+NY
+CUNY Queens College
+13264
+MI
+Missouri State University-Springfield
+13261
+TN
+University of Memphis
+13238
+OH
+Sinclair Community College
+13160
+MN
+Capella University
+13099
+OH
+Bowling Green State University-Main Campus
+13082
+FL
+University of North Florida
+13061
+MI
+Western Michigan University
+12992
+CA
+San Jacinto Community College
+12978
+CA
+Chaffey College
+12877
+IA
+Des Moines Area Community College
+12867
+KY
+University of Louisville
+12807
+FL
+Florida Gulf Coast University
+12780
+HI
+University of Hawaii at Manoa
+12746
+WA
+Western Washington University
+12730
+TX
+ECPI University
+12709
+CA
+California State University-San Marcos
+12701
+CA
+El Camino Community College District
+12700
+CO
+Metropolitan State University of Denver
+12622
+CA
+De Anza College
+12456
+CT
+Post University
+12453
+CA
+Oakland University
+12440
+NY
+SUNY at Albany
+12432
+CA
+California State University-Dominguez Hills
+12386
+FL
+University of Miami
+12365
+NH
+University of New Hampshire-Main Campus
+12320
+IL
+Loyola University Chicago
+12172
+AL
+University of Alabama at Birmingham
+12105
+VA
+Suffolk County Community College
+12094
+CA
+Central Piedmont Community College
+12075
+GA
+Savannah College of Art and Design
+12025
+KY
+Western Kentucky University
+11977
+NY
+Rochester Institute of Technology
+11957
+CA
+Fresno City College
+11709
+MA
+University of Massachusetts-Lowell
+11672
+OH
+University of Toledo
+11642
+CA
+Fullerton College
+11584
+LA
+University of Louisiana at Lafayette
+11438
+NY
+St. John's University-New York
+11422
+CA
+Palomar College
+11395
+CA
+Riverside City College
+11390
+PA
+University of Pennsylvania
+11385
+MN
+Minnesota State University-Mankato
+11375
+CA
+Sacramento City College
+11364
+VT
+University of Vermont
+11361
+CA
+Saddleback College
+11349
+NY
+CUNY Brooklyn College
+11322
+AZ
+Pima Community College
+11251
+CA
+Santa Ana College
+11219
+NY
+CUNY John Jay College of Criminal Justice
+11178
+NC
+North Carolina A & T State University
+11148
+CA
+Diablo Valley College
+11125
+NY
+Fordham University
+11123
+DC
+George Washington University
+11117
+NM
+Central New Mexico Community College
+11114
+MD
+Montgomery College
+11098
+
