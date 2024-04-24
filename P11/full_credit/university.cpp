@@ -9,8 +9,9 @@ int University::enrollment() const {return _enrollment;}
 
 std::istream& operator>>(std::istream& ist, University& u) {
     std::getline(ist, u._name);
-    ist >> u._enrollment; 
+    ist >> u._enrollment;
     ist.ignore();
+    if(ist) u.validate();
     return ist;
 }
 

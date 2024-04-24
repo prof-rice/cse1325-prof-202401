@@ -26,18 +26,20 @@ int main (int argc, char const* argv[]) {
     // Load university data into universities map
     std::map<State, Universities> universities;
     
+    // Temp variables
     State state;
     University new_U;
     
+    // Load university data into universities map
     while(true) {
         std::getline(ifs, state);
         ifs >> new_U;
         if(!ifs) break;
+        // The following if statement is C++'s default behavior!
+        // (In other words, this statement isn't required in C++.)
         if(universities.find(state) == universities.end()) {
-            // std::cerr << "Creating state " << state << std::endl;
             universities[state] = Universities{};
         }
-        // std::cerr << "Adding " << new_U.name() << " to " << state << std::endl;
         universities[state].push_back(new_U);
     }
 
@@ -63,6 +65,4 @@ int main (int argc, char const* argv[]) {
 */
         }
     }
-
-    return 0;
 }
